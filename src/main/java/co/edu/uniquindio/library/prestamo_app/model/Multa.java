@@ -27,6 +27,16 @@ public class Multa {
         this.usuarioAsociado = usuarioAsociado;
     }
 
+    public Multa(Prestamo prestamo, double valor, String motivo) {
+        this.prestamo = prestamo;
+        this.valor = valor;
+        this.motivo = motivo;
+        this.fechaGeneracion = LocalDate.now();
+        this.estadoMulta = EstadoMulta.PENDIENTE;
+        this.usuarioAsociado = prestamo.getUsuario();
+    }
+
+
     public Multa() {
 
     }
@@ -101,5 +111,13 @@ public class Multa {
 
     public void setUsuarioAsociado(Usuario usuarioAsociado) {
         this.usuarioAsociado = usuarioAsociado;
+    }
+
+    public void pagar(LocalDate fechaPago) {
+        if(this.estadoMulta == EstadoMulta.PAGADA) {
+            return;
+        }
+        this.fechaPago = fechaPago != null ? fechaPago : LocalDate.now();
+        this.estadoMulta = EstadoMulta.PAGADA;
     }
 }

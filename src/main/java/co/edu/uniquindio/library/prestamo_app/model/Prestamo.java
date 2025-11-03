@@ -1,10 +1,12 @@
 package co.edu.uniquindio.library.prestamo_app.model;
 
+import co.edu.uniquindio.library.prestamo_app.model.enums.EstadoEjemplar;
 import co.edu.uniquindio.library.prestamo_app.model.enums.EstadoPrestamo;
 
 import java.security.SecureRandom;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 
@@ -120,5 +122,27 @@ public class Prestamo {
 
     public void setMultasAsociadas(List<Multa> multasAsociadas) {
         this.multasAsociadas = multasAsociadas;
+    }
+
+    public void cerrar(LocalDate fechaDevolucion) {
+        this.fechaDevolucion = fechaDevolucion;
+        this.estadoPrestamo = EstadoPrestamo.CERRADO;
+        if(this.ejemplar != null) {
+            this.ejemplar.setEstadoEjemplar(EstadoEjemplar.DISPONIBLE);
+        }
+    }
+
+    public boolean estaMoroso() {
+        if (fechaDevolucion == null || fechaFinCompromiso == null) {
+            return false;
+        }
+        return fechaDevolucion.isAfter(fechaFinCompromiso);
+    }
+
+
+
+    public int calcularDiasMora() {
+         long diasMora = ChronoUnit.DAYS.between(fechaFinCompromiso, fechaDevolucion);
+         return diasMora > 0 ? (int) diasMora : 0;
     }
 }

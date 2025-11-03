@@ -112,4 +112,12 @@ public class Ejemplar {
     public void setPrestamosAsociados(List<Prestamo> prestamosAsociados) {
         this.prestamosAsociados = prestamosAsociados;
     }
+
+    public boolean estaDisponible() {
+        return this.estadoEjemplar == EstadoEjemplar.DISPONIBLE;
+    }
+
+    public void devolver() {
+        this.estadoEjemplar = EstadoEjemplar.DISPONIBLE;
+    }
 }
