@@ -1,10 +1,13 @@
 package co.edu.uniquindio.library.prestamo_app.model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 
-public class Bibliotecario {
+public class Bibliotecario implements Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     private static final AtomicLong contador = new AtomicLong(1);
 

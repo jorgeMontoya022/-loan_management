@@ -2,9 +2,12 @@ package co.edu.uniquindio.library.prestamo_app.model;
 
 import co.edu.uniquindio.library.prestamo_app.model.enums.EstadoMulta;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Multa {
+public class Multa implements Serializable {
+
+    private static final long serialVersionUID = 1L;
     private Long id;
     private Prestamo prestamo;
     private double valor;
