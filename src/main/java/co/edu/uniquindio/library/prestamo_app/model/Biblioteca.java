@@ -2,13 +2,16 @@ package co.edu.uniquindio.library.prestamo_app.model;
 
 import co.edu.uniquindio.library.prestamo_app.model.enums.*;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Biblioteca {
+public class Biblioteca implements Serializable {
+
+    private static final long serialVersionUID = 1L;
     private List<Usuario> usuarios;
     private List<Ejemplar> ejemplares;
     private List<Prestamo> prestamos;

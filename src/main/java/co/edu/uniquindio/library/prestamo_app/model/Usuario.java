@@ -2,12 +2,15 @@ package co.edu.uniquindio.library.prestamo_app.model;
 
 import co.edu.uniquindio.library.prestamo_app.model.enums.EstadoUsuario;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 
-public class Usuario {
+public class Usuario implements Serializable {
+
+    private static final long serialVersionUID = 1L;
     private static final AtomicLong contador = new AtomicLong(1);
 
     private Long id;

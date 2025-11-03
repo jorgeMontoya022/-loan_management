@@ -1,0 +1,221 @@
+/* ==================== CONTENEDOR PRINCIPAL ==================== */
+.login-container {
+    -fx-background-color: white;
+    -fx-pref-width: 1200;
+    -fx-pref-height: 700;
+}
+
+/* ==================== PANEL IZQUIERDO ==================== */
+.left-panel {
+    -fx-background-color: linear-gradient(to bottom, #6366F1, #8B5CF6);
+    -fx-padding: 60 50;
+}
+
+.logo-section {
+    -fx-padding: 0 0 40 0;
+}
+
+.logo-container {
+    -fx-background-color: rgba(255, 255, 255, 0.2);
+    -fx-background-radius: 25;
+    -fx-pref-width: 120;
+    -fx-pref-height: 120;
+}
+
+.logo-icon {
+    -fx-font-size: 60px;
+}
+
+.app-title {
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.app-subtitle {
+    -fx-font-size: 16px;
+    -fx-text-fill: rgba(255, 255, 255, 0.9);
+}
+
+/* ==================== CARACTERÍSTICAS ==================== */
+.features-section {
+    -fx-padding: 0;
+}
+
+.feature-item {
+    -fx-padding: 0;
+}
+
+.feature-icon-container {
+    -fx-background-color: rgba(255, 255, 255, 0.15);
+    -fx-background-radius: 15;
+    -fx-pref-width: 60;
+    -fx-pref-height: 60;
+}
+
+.feature-icon {
+    -fx-font-size: 28px;
+}
+
+.feature-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.feature-description {
+    -fx-font-size: 14px;
+    -fx-text-fill: rgba(255, 255, 255, 0.8);
+}
+
+/* ==================== PANEL DERECHO ==================== */
+.right-panel {
+    -fx-background-color: white;
+    -fx-padding: 60 50;
+}
+
+.login-form {
+    -fx-max-width: 450;
+}
+
+.login-title {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1F2937;
+}
+
+.login-subtitle {
+    -fx-font-size: 14px;
+    -fx-text-fill: #6B7280;
+}
+
+/* ==================== CREDENCIALES DEMO ==================== */
+.demo-credentials {
+    -fx-background-color: #FEF3C7;
+    -fx-background-radius: 12;
+    -fx-padding: 15;
+    -fx-spacing: 5;
+}
+
+.demo-icon {
+    -fx-font-size: 16px;
+}
+
+.demo-title {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #92400E;
+}
+
+.demo-info {
+    -fx-padding: 2 0 0 25;
+}
+
+.demo-label {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #78350F;
+}
+
+.demo-value {
+    -fx-font-size: 13px;
+    -fx-font-family: 'Courier New', monospace;
+    -fx-text-fill: #92400E;
+}
+
+/* ==================== CAMPOS DE ENTRADA ==================== */
+.field-label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #374151;
+}
+
+.input-box {
+    -fx-background-color: white;
+    -fx-border-color: #D1D5DB;
+    -fx-border-width: 2;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 12 15;
+}
+
+.input-box:focused {
+    -fx-border-color: #6366F1;
+}
+
+.input-icon {
+    -fx-font-size: 18px;
+}
+
+.input-field {
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+    -fx-font-size: 14px;
+}
+
+.input-field:focused {
+    -fx-background-color: transparent;
+}
+
+/* ==================== CHECKBOX Y LINK ==================== */
+.remember-checkbox {
+    -fx-font-size: 13px;
+    -fx-text-fill: #4B5563;
+}
+
+.forgot-link {
+    -fx-font-size: 13px;
+    -fx-text-fill: #6366F1;
+    -fx-underline: false;
+}
+
+.forgot-link:hover {
+    -fx-underline: true;
+}
+
+/* ==================== BOTÓN LOGIN ==================== */
+.btn-login {
+    -fx-background-color: linear-gradient(to right, #6366F1, #8B5CF6);
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10;
+    -fx-padding: 15 0;
+    -fx-cursor: hand;
+}
+
+.btn-login:hover {
+    -fx-background-color: linear-gradient(to right, #4F46E5, #7C3AED);
+}
+
+/* ==================== SEPARADOR ==================== */
+.separator {
+    -fx-padding: 10 0;
+}
+
+.separator-line {
+    -fx-background-color: #E5E7EB;
+    -fx-pref-height: 1;
+}
+
+.separator-circle {
+    -fx-font-size: 12px;
+    -fx-text-fill: #9CA3AF;
+}
+
+/* ==================== PIE DE PÁGINA ==================== */
+.help-text {
+    -fx-font-size: 13px;
+    -fx-text-fill: #6B7280;
+}
+
+.support-link {
+    -fx-font-size: 14px;
+    -fx-text-fill: #6366F1;
+    -fx-font-weight: bold;
+    -fx-underline: false;
+}
+
+.support-link:hover {
+    -fx-underline: true;
+}

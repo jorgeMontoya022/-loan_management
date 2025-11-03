@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="21.0.2" class="java.beans.XMLDecoder">
+ <object class="co.edu.uniquindio.library.prestamo_app.model.Biblioteca" id="Biblioteca0">
+  <void property="auditorias">
+   <void method="add">
+    <object class="co.edu.uniquindio.library.prestamo_app.model.RegistroAuditoria">
+     <void property="bibliotecario">
+      <object class="co.edu.uniquindio.library.prestamo_app.model.Bibliotecario" id="Bibliotecario0">
+       <void property="contrasenia">
+        <string>1234</string>
+       </void>
+       <void property="documento">
+        <string>B-123</string>
+       </void>
+       <void property="email">
+        <string>ana.torres@uq.edu.co</string>
+       </void>
+       <void property="id">
+        <long>1</long>
+       </void>
+       <void property="nombre">
+        <string>Ana Torres</string>
+       </void>
+       <void property="registrosAuditoria">
+        <object class="java.util.ArrayList"/>
+       </void>
+       <void property="usuario">
+        <string>ana.torres</string>
+       </void>
+      </object>
+     </void>
+     <void property="detalles">
+      <string>Creación de usuario Laura Pérez</string>
+     </void>
+     <void property="tipoOperacion">
+      <object class="java.lang.Enum" method="valueOf">
+       <class>co.edu.uniquindio.library.prestamo_app.model.enums.TipoOperacion</class>
+       <string>CREAR_USUARIO</string>
+      </object>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="co.edu.uniquindio.library.prestamo_app.model.RegistroAuditoria">
+     <void property="bibliotecario">
+      <object idref="Bibliotecario0"/>
+     </void>
+     <void property="detalles">
+      <string>Creación de préstamo para Laura Pérez</string>
+     </void>
+     <void property="tipoOperacion">
+      <object class="java.lang.Enum" method="valueOf">
+       <class>co.edu.uniquindio.library.prestamo_app.model.enums.TipoOperacion</class>
+       <string>CREAR_PRESTAMO</string>
+      </object>
+     </void>
+    </object>
+   </void>
+  </void>
+  <void property="bibliotecarios">
+   <void method="add">
+    <object idref="Bibliotecario0"/>
+   </void>
+   <void method="add">
+    <object class="co.edu.uniquindio.library.prestamo_app.model.Bibliotecario" id="Bibliotecario1">
+     <void property="contrasenia">
+      <string>abcd</string>
+     </void>
+     <void property="documento">
+      <string>B-456</string>
+     </void>
+     <void property="email">
+      <string>carlos.mejia@uq.edu.co</string>
+     </void>
+     <void property="id">
+      <long>2</long>
+     </void>
+     <void property="nombre">
+      <string>Carlos Mejía</string>
+     </void>
+     <void property="registrosAuditoria">
+      <object class="java.util.ArrayList"/>
+     </void>
+     <void property="usuario">
+      <string>carlos.mejia</string>
+     </void>
+    </object>
+   </void>
+  </void>
+  <void property="ejemplares">
+   <void method="add">
+    <object class="co.edu.uniquindio.library.prestamo_app.model.Ejemplar">
+     <void property="anioPublicacion">
+      <int>2018</int>
+     </void>
+     <void property="autor">
+      <string>Juan Gómez</string>
+     </void>
+     <void property="editorial">
+      <string>Editorial UQ</string>
+     </void>
+     <void property="estadoEjemplar">
+      <object class="java.lang.Enum" id="EstadoEjemplar0" method="valueOf">
+       <class>co.edu.uniquindio.library.prestamo_app.model.enums.EstadoEjemplar</class>
+       <string>DISPONIBLE</string>
+      </object>
+     </void>
+     <void property="id">
+      <long>1</long>
+     </void>
+     <void property="isbn">
+      <string>978-958-123-000-1</string>
+     </void>
+     <void property="prestamosAsociados">
+      <object class="java.util.ArrayList"/>
+     </void>
+     <void property="titulo">
+      <string>Estructuras de Datos en Java</string>
+     </void>
+     <void property="ubicacion">
+      <string>Estante A1</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="co.edu.uniquindio.library.prestamo_app.model.Ejemplar" id="Ejemplar0">
+     <void property="anioPublicacion">
+      <int>2018</int>
+     </void>
+     <void property="autor">
+      <string>Juan Gómez</string>
+     </void>
+     <void property="editorial">
+      <string>Editorial UQ</string>
+     </void>
+     <void property="estadoEjemplar">
+      <object class="java.lang.Enum" method="valueOf">
+       <class>co.edu.uniquindio.library.prestamo_app.model.enums.EstadoEjemplar</class>
+       <string>PRESTADO</string>
+      </object>
+     </void>
+     <void property="id">
+      <long>2</long>
+     </void>
+     <void property="isbn">
+      <string>978-958-123-000-1</string>
+     </void>
+     <void property="prestamosAsociados">
+      <object class="java.util.ArrayList"/>
+     </void>
+     <void property="titulo">
+      <string>Estructuras de Datos en Java</string>
+     </void>
+     <void property="ubicacion">
+      <string>Estante A2</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="co.edu.uniquindio.library.prestamo_app.model.Ejemplar" id="Ejemplar1">
+     <void property="anioPublicacion">
+      <int>2020</int>
+     </void>
+     <void property="autor">
+      <string>María Ruiz</string>
+     </void>
+     <void property="editorial">
+      <string>Editorial DB</string>
+     </void>
+     <void property="estadoEjemplar">
+      <object idref="EstadoEjemplar0"/>
+     </void>
+     <void property="id">
+      <long>3</long>
+     </void>
+     <void property="isbn">
+      <string>978-958-654-321-0</string>
+     </void>
+     <void property="prestamosAsociados">
+      <object class="java.util.ArrayList"/>
+     </void>
+     <void property="titulo">
+      <string>Bases de Datos Avanzadas</string>
+     </void>
+     <void property="ubicacion">
+      <string>Estante B2</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="co.edu.uniquindio.library.prestamo_app.model.Ejemplar">
+     <void property="anioPublicacion">
+      <int>2016</int>
+     </void>
+     <void property="autor">
+      <string>Luis Pérez</string>
+     </void>
+     <void property="editorial">
+      <string>Editorial CFA</string>
+     </void>
+     <void property="estadoEjemplar">
+      <object idref="EstadoEjemplar0"/>
+     </void>
+     <void property="id">
+      <long>4</long>
+     </void>
+     <void property="isbn">
+      <string>978-958-222-111-9</string>
+     </void>
+     <void property="prestamosAsociados">
+      <object class="java.util.ArrayList"/>
+     </void>
+     <void property="titulo">
+      <string>Contabilidad Financiera</string>
+     </void>
+     <void property="ubicacion">
+      <string>Estante C3</string>
+     </void>
+    </object>
+   </void>
+  </void>
+  <void property="multas">
+   <void method="add">
+    <object class="co.edu.uniquindio.library.prestamo_app.model.Multa" id="Multa0">
+     <void property="bibliotecarioRegistro">
+      <object idref="Bibliotecario0"/>
+     </void>
+     <void property="estadoMulta">
+      <object class="java.lang.Enum" method="valueOf">
+       <class>co.edu.uniquindio.library.prestamo_app.model.enums.EstadoMulta</class>
+       <string>PENDIENTE</string>
+      </object>
+     </void>
+     <void property="fechaGeneracion">
+      <object class="java.time.LocalDate" method="of">
+       <int>2025</int>
+       <int>10</int>
+       <int>31</int>
+      </object>
+     </void>
+     <void property="motivo">
+      <string>Mora de 3 días</string>
+     </void>
+     <void property="prestamo">
+      <object class="co.edu.uniquindio.library.prestamo_app.model.Prestamo" id="Prestamo0">
+       <void property="bibliotecario">
+        <object idref="Bibliotecario0"/>
+       </void>
+       <void property="ejemplar">
+        <object idref="Ejemplar0"/>
+       </void>
+       <void property="estadoPrestamo">
+        <object class="java.lang.Enum" id="EstadoPrestamo0" method="valueOf">
+         <class>co.edu.uniquindio.library.prestamo_app.model.enums.EstadoPrestamo</class>
+         <string>ACTIVO</string>
+        </object>
+       </void>
+       <void property="fechaFinCompromiso">
+        <object class="java.time.LocalDate" method="of">
+         <int>2025</int>
+         <int>10</int>
+         <int>30</int>
+        </object>
+       </void>
+       <void property="fechaInicio">
+        <object class="java.time.LocalDate" method="of">
+         <int>2025</int>
+         <int>10</int>
+         <int>23</int>
+        </object>
+       </void>
+       <void property="id">
+        <long>1</long>
+       </void>
+       <void property="multasAsociadas">
+        <object class="java.util.ArrayList">
+         <void method="add">
+          <object idref="Multa0"/>
+         </void>
+        </object>
+       </void>
+       <void property="usuario">
+        <object class="co.edu.uniquindio.library.prestamo_app.model.Usuario" id="Usuario0">
+         <void property="documento">
+          <string>U-111</string>
+         </void>
+         <void property="email">
+          <string>laura.perez@uq.edu.co</string>
+         </void>
+         <void property="estadoUsuario">
+          <object class="java.lang.Enum" id="EstadoUsuario0" method="valueOf">
+           <class>co.edu.uniquindio.library.prestamo_app.model.enums.EstadoUsuario</class>
+           <string>ACTIVO</string>
+          </object>
+         </void>
+         <void property="id">
+          <long>1</long>
+         </void>
+         <void property="multasAsociadas">
+          <object class="java.util.ArrayList">
+           <void method="add">
+            <object idref="Multa0"/>
+           </void>
+          </object>
+         </void>
+         <void property="nombre">
+          <string>Laura Pérez</string>
+         </void>
+         <void property="prestamosAsociados">
+          <object class="java.util.ArrayList">
+           <void method="add">
+            <object idref="Prestamo0"/>
+           </void>
+          </object>
+         </void>
+         <void property="programa">
+          <string>Ingeniería de Sistemas</string>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+     <void property="usuarioAsociado">
+      <object idref="Usuario0"/>
+     </void>
+     <void property="valor">
+      <double>6000.0</double>
+     </void>
+    </object>
+   </void>
+  </void>
+  <void property="prestamos">
+   <void method="add">
+    <object idref="Prestamo0"/>
+   </void>
+   <void method="add">
+    <object class="co.edu.uniquindio.library.prestamo_app.model.Prestamo" id="Prestamo1">
+     <void property="bibliotecario">
+      <object idref="Bibliotecario1"/>
+     </void>
+     <void property="ejemplar">
+      <object idref="Ejemplar1"/>
+     </void>
+     <void property="estadoPrestamo">
+      <object idref="EstadoPrestamo0"/>
+     </void>
+     <void property="fechaFinCompromiso">
+      <object class="java.time.LocalDate" method="of">
+       <int>2025</int>
+       <int>11</int>
+       <int>7</int>
+      </object>
+     </void>
+     <void property="fechaInicio">
+      <object class="java.time.LocalDate" method="of">
+       <int>2025</int>
+       <int>10</int>
+       <int>31</int>
+      </object>
+     </void>
+     <void property="id">
+      <long>2</long>
+     </void>
+     <void property="usuario">
+      <object class="co.edu.uniquindio.library.prestamo_app.model.Usuario" id="Usuario1">
+       <void property="documento">
+        <string>U-222</string>
+       </void>
+       <void property="email">
+        <string>mateo.ramirez@uq.edu.co</string>
+       </void>
+       <void property="estadoUsuario">
+        <object idref="EstadoUsuario0"/>
+       </void>
+       <void property="id">
+        <long>2</long>
+       </void>
+       <void property="multasAsociadas">
+        <object class="java.util.ArrayList"/>
+       </void>
+       <void property="nombre">
+        <string>Mateo Ramírez</string>
+       </void>
+       <void property="prestamosAsociados">
+        <object class="java.util.ArrayList">
+         <void method="add">
+          <object idref="Prestamo1"/>
+         </void>
+        </object>
+       </void>
+       <void property="programa">
+        <string>Administración</string>
+       </void>
+      </object>
+     </void>
+    </object>
+   </void>
+  </void>
+  <void property="usuarios">
+   <void method="add">
+    <object idref="Usuario0"/>
+   </void>
+   <void method="add">
+    <object idref="Usuario1"/>
+   </void>
+   <void method="add">
+    <object class="co.edu.uniquindio.library.prestamo_app.model.Usuario">
+     <void property="documento">
+      <string>U-333</string>
+     </void>
+     <void property="email">
+      <string>sofia.lopez@uq.edu.co</string>
+     </void>
+     <void property="estadoUsuario">
+      <object class="java.lang.Enum" method="valueOf">
+       <class>co.edu.uniquindio.library.prestamo_app.model.enums.EstadoUsuario</class>
+       <string>INACTIVO</string>
+      </object>
+     </void>
+     <void property="id">
+      <long>3</long>
+     </void>
+     <void property="multasAsociadas">
+      <object class="java.util.ArrayList"/>
+     </void>
+     <void property="nombre">
+      <string>Sofía López</string>
+     </void>
+     <void property="prestamosAsociados">
+      <object class="java.util.ArrayList"/>
+     </void>
+     <void property="programa">
+      <string>Contaduría</string>
+     </void>
+    </object>
+   </void>
+  </void>
+ </object>
+</java>

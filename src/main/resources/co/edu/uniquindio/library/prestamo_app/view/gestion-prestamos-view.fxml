@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane styleClass="root-container" stylesheets="@../styles/registro-prestamo.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.library.prestamo_app.viewController.RegistroPrestamoViewController">
+
+    <!-- HEADER -->
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="20" styleClass="header-container">
+            <padding>
+                <Insets bottom="20" left="30" right="30" top="20" />
+            </padding>
+
+            <!-- Icono y Título -->
+            <HBox alignment="CENTER_LEFT" spacing="15" HBox.hgrow="ALWAYS">
+                <Label styleClass="header-icon" text="📝" />
+                <Label styleClass="header-title" text="Registrar Préstamo" />
+            </HBox>
+
+            <!-- Botón Volver -->
+            <Button fx:id="btnVolver" onAction="#onVolver" styleClass="btn-secondary" text="← Volver">
+                <padding>
+                    <Insets bottom="10" left="20" right="20" top="10" />
+                </padding>
+            </Button>
+        </HBox>
+    </top>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <center>
+        <ScrollPane fitToWidth="true" styleClass="scroll-pane">
+            <VBox spacing="20" styleClass="content-container">
+                <padding>
+                    <Insets bottom="20" left="30" right="30" top="20" />
+                </padding>
+
+                <!-- PASO 1: BUSCAR USUARIO -->
+                <VBox spacing="15" styleClass="step-container">
+
+                    <HBox alignment="CENTER_LEFT" spacing="10">
+                        <Label styleClass="step-icon" text="👤" />
+                        <Label styleClass="step-title" text="Paso 1: Buscar Usuario" />
+                    </HBox>
+
+                    <VBox spacing="10">
+                        <Label styleClass="label-field" text="Documento o Email" />
+
+                        <HBox alignment="CENTER_LEFT" spacing="15">
+                            <TextField fx:id="txtBuscarUsuario" promptText="Ej: 1234567890 o usuario@utp.edu.co" styleClass="input-field-search" HBox.hgrow="ALWAYS" />
+                            <Button fx:id="btnBuscarUsuario" onAction="#onBuscarUsuario" styleClass="btn-search" text="Buscar">
+                                <padding>
+                                    <Insets bottom="12" left="25" right="25" top="12" />
+                                </padding>
+                            </Button>
+                        </HBox>
+                    </VBox>
+
+                    <!-- INFORMACIÓN DEL USUARIO SELECCIONADO -->
+                    <VBox fx:id="vboxUsuarioInfo" managed="false" spacing="10" styleClass="user-info-box" visible="false">
+                        <HBox alignment="CENTER_LEFT" spacing="15">
+                            <StackPane styleClass="user-avatar">
+                                <Label styleClass="avatar-icon" text="👤" />
+                            </StackPane>
+                            <VBox spacing="5">
+                                <Label fx:id="lblNombreUsuario" styleClass="user-name" text="Nombre del Usuario" />
+                                <HBox spacing="10">
+                                    <Label fx:id="lblDocumentoUsuario" styleClass="user-detail" text="Doc: 1234567890" />
+                                    <Label styleClass="separator-dot" text="•" />
+                                    <Label fx:id="lblProgramaUsuario" styleClass="user-detail" text="Ingeniería de Sistemas" />
+                                </HBox>
+                            </VBox>
+                        </HBox>
+                    </VBox>
+
+                </VBox>
+
+                <!-- PASO 2: BUSCAR EJEMPLAR -->
+                <VBox spacing="15" styleClass="step-container">
+
+                    <HBox alignment="CENTER_LEFT" spacing="10">
+                        <Label styleClass="step-icon" text="📚" />
+                        <Label styleClass="step-title" text="Paso 2: Buscar Ejemplar" />
+                    </HBox>
+
+                    <VBox spacing="10">
+                        <Label styleClass="label-field" text="ISBN o Título del Libro" />
+
+                        <HBox alignment="CENTER_LEFT" spacing="15">
+                            <TextField fx:id="txtBuscarEjemplar" promptText="Ej: 978-3-16-148410-0 o Cien años de soledad" styleClass="input-field-search" HBox.hgrow="ALWAYS" />
+                            <Button fx:id="btnBuscarEjemplar" onAction="#onBuscarEjemplar" styleClass="btn-search" text="Buscar">
+                                <padding>
+                                    <Insets bottom="12" left="25" right="25" top="12" />
+                                </padding>
+                            </Button>
+                        </HBox>
+                    </VBox>
+
+                    <!-- INFORMACIÓN DEL EJEMPLAR SELECCIONADO -->
+                    <VBox fx:id="vboxEjemplarInfo" managed="false" spacing="10" styleClass="book-info-box" visible="false">
+                        <HBox alignment="CENTER_LEFT" spacing="15">
+                            <StackPane styleClass="book-icon-container">
+                                <Label styleClass="book-icon" text="📖" />
+                            </StackPane>
+                            <VBox spacing="5" HBox.hgrow="ALWAYS">
+                                <Label fx:id="lblTituloLibro" styleClass="book-title" text="Título del Libro" />
+                                <Label fx:id="lblAutorLibro" styleClass="book-detail" text="Autor: " />
+                                <HBox spacing="10">
+                                    <Label fx:id="lblIsbnLibro" styleClass="book-detail" text="ISBN: " />
+                                    <Label styleClass="separator-dot" text="•" />
+                                    <Label fx:id="lblUbicacionLibro" styleClass="book-detail" text="Ubicación: " />
+                                </HBox>
+                            </VBox>
+                        </HBox>
+                    </VBox>
+
+                </VBox>
+
+                <!-- PASO 3: CONFIRMAR PRÉSTAMO -->
+                <VBox fx:id="vboxConfirmacion" spacing="15" styleClass="step-container">
+
+                    <HBox alignment="CENTER_LEFT" spacing="10">
+                        <Label styleClass="step-icon" text="✅" />
+                        <Label styleClass="step-title" text="Paso 3: Confirmar Préstamo" />
+                    </HBox>
+
+                    <!-- SECCIÓN DE SELECCIÓN -->
+                    <HBox spacing="20">
+
+                        <!-- USUARIO -->
+                        <VBox spacing="10" styleClass="selection-box" HBox.hgrow="ALWAYS">
+                            <HBox alignment="CENTER_LEFT" spacing="8">
+                                <Label styleClass="selection-icon" text="👤" />
+                                <Label styleClass="selection-label" text="USUARIO" />
+                            </HBox>
+                            <Label fx:id="lblUsuarioSeleccion" styleClass="selection-placeholder" text="Seleccione un usuario" />
+                        </VBox>
+
+                        <!-- LIBRO -->
+                        <VBox spacing="10" styleClass="selection-box" HBox.hgrow="ALWAYS">
+                            <HBox alignment="CENTER_LEFT" spacing="8">
+                                <Label styleClass="selection-icon" text="📚" />
+                                <Label styleClass="selection-label" text="LIBRO" />
+                            </HBox>
+                            <Label fx:id="lblEjemplarSeleccion" styleClass="selection-placeholder" text="Seleccione un ejemplar" />
+                        </VBox>
+
+                    </HBox>
+
+                    <!-- FECHAS -->
+                    <HBox spacing="20">
+
+                        <!-- FECHA DE INICIO -->
+                        <VBox spacing="10" styleClass="date-box" HBox.hgrow="ALWAYS">
+                            <Label styleClass="date-label" text="FECHA DE INICIO" />
+                            <Label fx:id="lblFechaInicio" styleClass="date-value" text="01/11/2025" />
+                        </VBox>
+
+                        <!-- FECHA DE COMPROMISO -->
+                        <VBox spacing="10" styleClass="date-box-highlight" HBox.hgrow="ALWAYS">
+                            <Label styleClass="date-label-highlight" text="FECHA DE COMPROMISO" />
+                            <Label fx:id="lblFechaCompromiso" styleClass="date-value-highlight" text="15/11/2025" />
+                        </VBox>
+
+                    </HBox>
+
+                    <!-- BOTONES DE ACCIÓN -->
+                    <HBox alignment="CENTER" spacing="20">
+                        <Button fx:id="btnCancelar" onAction="#onCancelar" prefWidth="300" styleClass="btn-cancel" text="Cancelar">
+                            <padding>
+                                <Insets bottom="12" left="25" right="25" top="12" />
+                            </padding>
+                        </Button>
+                        <Button fx:id="btnConfirmarPrestamo" onAction="#onConfirmarPrestamo" prefWidth="300" styleClass="btn-primary" text="Confirmar Préstamo">
+                            <padding>
+                                <Insets bottom="12" left="25" right="25" top="12" />
+                            </padding>
+                        </Button>
+                    </HBox>
+
+                </VBox>
+
+            </VBox>
+        </ScrollPane>
+    </center>
+
+</BorderPane>

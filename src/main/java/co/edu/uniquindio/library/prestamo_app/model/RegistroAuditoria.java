@@ -2,10 +2,13 @@ package co.edu.uniquindio.library.prestamo_app.model;
 
 import co.edu.uniquindio.library.prestamo_app.model.enums.TipoOperacion;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-public class RegistroAuditoria {
+public class RegistroAuditoria implements Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     private Long id;
     private TipoOperacion tipoOperacion;

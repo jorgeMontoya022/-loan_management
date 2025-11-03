@@ -1,0 +1,144 @@
+/* ==================== CONTENEDOR PRINCIPAL ==================== */
+.dialog-container {
+    -fx-background-color: white;
+    -fx-background-radius: 20;
+}
+
+/* ==================== HEADER ==================== */
+.header {
+    -fx-background-color: white;
+    -fx-background-radius: 20 20 0 0;
+    -fx-border-color: #E5E7EB;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 20;
+}
+
+.icon-container {
+    -fx-background-color: #6366F1;
+    -fx-background-radius: 12;
+    -fx-pref-width: 50;
+    -fx-pref-height: 50;
+}
+
+.icon-plus {
+    -fx-text-fill: white;
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+}
+
+.title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1F2937;
+}
+
+.btn-close {
+    -fx-background-color: #F3F4F6;
+    -fx-text-fill: #6B7280;
+    -fx-background-radius: 8;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-pref-width: 35;
+    -fx-pref-height: 35;
+    -fx-cursor: hand;
+}
+
+.btn-close:hover {
+    -fx-background-color: #E5E7EB;
+}
+
+/* ==================== FORMULARIO ==================== */
+.form-container {
+    -fx-padding: 30;
+}
+
+.label-field {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #374151;
+}
+
+.required-mark {
+    -fx-text-fill: #EF4444;
+    -fx-font-weight: bold;
+}
+
+.info-icon {
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+}
+
+/* ==================== INPUTS ==================== */
+.input-container {
+    -fx-background-color: #F9FAFB;
+    -fx-background-radius: 10;
+    -fx-border-color: #E5E7EB;
+    -fx-border-radius: 10;
+    -fx-border-width: 1;
+    -fx-padding: 12 15;
+}
+
+/* El efecto focus se debe manejar desde el controlador con listeners */
+
+.input-icon {
+    -fx-font-size: 18px;
+}
+
+.input-field {
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+    -fx-font-size: 14px;
+}
+
+.input-field:focused {
+    -fx-background-color: transparent;
+}
+
+/* ==================== CARACTERES Y ADVERTENCIAS ==================== */
+.character-counter {
+    -fx-font-size: 12px;
+    -fx-text-fill: #9CA3AF;
+}
+
+.warning-icon {
+    -fx-font-size: 12px;
+}
+
+.warning-text {
+    -fx-font-size: 12px;
+    -fx-text-fill: #F59E0B;
+    -fx-font-style: italic;
+}
+
+/* ==================== BOTONES ==================== */
+.buttons-container {
+    -fx-padding: 0 30 30 30;
+}
+
+.btn-cancel {
+    -fx-background-color: #F3F4F6;
+    -fx-text-fill: #374151;
+    -fx-background-radius: 10;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 12 40;
+    -fx-cursor: hand;
+}
+
+.btn-cancel:hover {
+    -fx-background-color: #E5E7EB;
+}
+
+.btn-save {
+    -fx-background-color: linear-gradient(to right, #6366F1, #8B5CF6);
+    -fx-text-fill: white;
+    -fx-background-radius: 10;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 12 40;
+    -fx-cursor: hand;
+}
+
+.btn-save:hover {
+    -fx-background-color: linear-gradient(to right, #4F46E5, #7C3AED);
+}

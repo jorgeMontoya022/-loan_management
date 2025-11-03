@@ -3,6 +3,7 @@ package co.edu.uniquindio.library.prestamo_app.model;
 import co.edu.uniquindio.library.prestamo_app.model.enums.EstadoEjemplar;
 import co.edu.uniquindio.library.prestamo_app.model.enums.EstadoPrestamo;
 
+import java.io.Serializable;
 import java.security.SecureRandom;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -10,7 +11,9 @@ import java.time.temporal.ChronoUnit;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 
-public class Prestamo {
+public class Prestamo implements Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     private static final AtomicLong contador = new AtomicLong(1);
 
