@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox styleClass="login-container" stylesheets="@../styles/login.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.library.prestamo_app.viewController.LoginViewController">
+
+    <!-- PANEL IZQUIERDO - INFORMACIÓN DEL SISTEMA -->
+    <VBox styleClass="left-panel" HBox.hgrow="ALWAYS">
+
+        <!-- LOGO Y TÍTULO -->
+        <VBox alignment="CENTER" spacing="20" styleClass="logo-section">
+            <StackPane styleClass="logo-container">
+                <Label styleClass="logo-icon" text="📚" />
+            </StackPane>
+
+            <Label styleClass="app-title" text="BiblioSystem" />
+            <Label styleClass="app-subtitle" text="Sistema de Gestión de Biblioteca Universitaria" />
+        </VBox>
+
+        <Region VBox.vgrow="ALWAYS" />
+
+        <!-- CARACTERÍSTICAS DEL SISTEMA -->
+        <VBox spacing="30" styleClass="features-section">
+
+            <HBox alignment="CENTER_LEFT" spacing="15" styleClass="feature-item">
+                <StackPane styleClass="feature-icon-container">
+                    <Label styleClass="feature-icon" text="📝" />
+                </StackPane>
+                <VBox spacing="5">
+                    <Label styleClass="feature-title" text="Gestión de Préstamos" />
+                    <Label styleClass="feature-description" text="Control total de transacciones" />
+                </VBox>
+            </HBox>
+
+            <HBox alignment="CENTER_LEFT" spacing="15" styleClass="feature-item">
+                <StackPane styleClass="feature-icon-container">
+                    <Label styleClass="feature-icon" text="👥" />
+                </StackPane>
+                <VBox spacing="5">
+                    <Label styleClass="feature-title" text="Administración de Usuarios" />
+                    <Label styleClass="feature-description" text="Gestiona usuarios" />
+                </VBox>
+            </HBox>
+
+            <HBox alignment="CENTER_LEFT" spacing="15" styleClass="feature-item">
+                <StackPane styleClass="feature-icon-container">
+                    <Label styleClass="feature-icon" text="📊" />
+                </StackPane>
+                <VBox spacing="5">
+                    <Label styleClass="feature-title" text="Reportes en Tiempo Real" />
+                    <Label styleClass="feature-description" text="Estadísticas y métricas instantáneas" />
+                </VBox>
+            </HBox>
+
+        </VBox>
+
+        <Region VBox.vgrow="ALWAYS" />
+    </VBox>
+
+    <!-- PANEL DERECHO - FORMULARIO DE LOGIN -->
+    <VBox alignment="CENTER" styleClass="right-panel" HBox.hgrow="ALWAYS">
+
+        <VBox spacing="25" styleClass="login-form">
+
+            <!-- ENCABEZADO -->
+            <VBox alignment="CENTER" spacing="10">
+                <Label styleClass="login-title" text="Bienvenido de nuevo" />
+                <Label styleClass="login-subtitle" text="Ingresa tus credenciales para acceder al sistema" />
+            </VBox>
+
+            <!-- CREDENCIALES DE DEMOSTRACIÓN -->
+            <VBox styleClass="demo-credentials">
+                <HBox alignment="CENTER_LEFT" spacing="8">
+                    <Label styleClass="demo-icon" text="🎯" />
+                    <Label styleClass="demo-title" text="Credenciales de demostración" />
+                </HBox>
+                <HBox spacing="5" styleClass="demo-info">
+                    <Label styleClass="demo-label" text="Usuario:" />
+                    <Label styleClass="demo-value" text="admin" />
+                </HBox>
+                <HBox spacing="5" styleClass="demo-info">
+                    <Label styleClass="demo-label" text="Contraseña:" />
+                    <Label styleClass="demo-value" text="admin123" />
+                </HBox>
+            </VBox>
+
+            <!-- CAMPO USUARIO -->
+            <VBox spacing="8">
+                <Label styleClass="field-label" text="Usuario" />
+                <HBox alignment="CENTER_LEFT" spacing="10" styleClass="input-box">
+                    <Label styleClass="input-icon" text="👤" />
+                    <TextField fx:id="txtUsuario" promptText="Ingresa tu usuario" styleClass="input-field" HBox.hgrow="ALWAYS" />
+                </HBox>
+            </VBox>
+
+            <!-- CAMPO CONTRASEÑA -->
+            <VBox spacing="8">
+                <Label styleClass="field-label" text="Contraseña" />
+                <HBox alignment="CENTER_LEFT" spacing="10" styleClass="input-box">
+                    <Label styleClass="input-icon" text="🔒" />
+                    <PasswordField fx:id="txtPassword" promptText="Ingresa tu contraseña" styleClass="input-field" HBox.hgrow="ALWAYS" />
+                </HBox>
+            </VBox>
+
+            <!-- RECORDARME Y OLVIDÉ CONTRASEÑA -->
+            <HBox alignment="CENTER_LEFT" spacing="10">
+                <CheckBox fx:id="chkRecordarme" styleClass="remember-checkbox" text="Recordarme" />
+                <Region HBox.hgrow="ALWAYS" />
+                <Hyperlink styleClass="forgot-link" text="¿Olvidaste tu contraseña?" />
+            </HBox>
+
+            <!-- BOTÓN INICIAR SESIÓN -->
+            <Button fx:id="btnIniciarSesion" onAction="#onIniciarSesion" prefWidth="400" styleClass="btn-login" text="Iniciar Sesión" />
+
+            <!-- SEPARADOR -->
+            <HBox alignment="CENTER" spacing="10" styleClass="separator">
+                <Region styleClass="separator-line" HBox.hgrow="ALWAYS" />
+                <Label styleClass="separator-circle" text="○" />
+                <Region styleClass="separator-line" HBox.hgrow="ALWAYS" />
+            </HBox>
+
+            <!-- PIE DE PÁGINA -->
+            <VBox alignment="CENTER" spacing="10">
+                <Label styleClass="help-text" text="¿Necesitas ayuda para acceder?" />
+                <Hyperlink styleClass="support-link" text="Contacta al soporte técnico" />
+            </VBox>
+
+        </VBox>
+
+    </VBox>
+
+</HBox>
