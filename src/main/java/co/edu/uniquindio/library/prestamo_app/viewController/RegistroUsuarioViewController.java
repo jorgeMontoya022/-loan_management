@@ -120,6 +120,10 @@ public class RegistroUsuarioViewController extends CoreViewController{
             mensaje.append("El documento del usuario es requerido.\n");
         }
 
+        if(usuario.getPrograma() == null || usuario.getPrograma().isEmpty()) {
+            mensaje.append("El programa al que pertenece el usuario es requerido.\n");
+        }
+
         if (usuario.getEmail() == null || usuario.getEmail().isEmpty()) {
             mensaje.append("El email es requerido.\n");
         } else if (!validarFormatoEmail(usuario.getEmail())) {
