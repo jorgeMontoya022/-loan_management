@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane styleClass="root-container" stylesheets="@../styles/perfil.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.library.prestamo_app.viewController.PerfilBibliotecarioViewController">
+
+    <!-- HEADER -->
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="15" styleClass="header-container">
+            <padding>
+                <Insets bottom="15" left="20" right="20" top="15" />
+            </padding>
+
+            <!-- Icono y Título -->
+            <HBox alignment="CENTER_LEFT" spacing="12" HBox.hgrow="ALWAYS">
+                <Label styleClass="header-icon" text="👤" />
+                <Label styleClass="header-title" text="Mi Perfil" />
+            </HBox>
+
+            <!-- Botón Volver -->
+            <Button fx:id="btnVolver" onAction="#onVolverClick" styleClass="btn-secondary" text="← Volver">
+                <padding>
+                    <Insets bottom="10" left="18" right="18" top="10" />
+                </padding>
+            </Button>
+        </HBox>
+    </top>
+
+    <!-- CONTENIDO PRINCIPAL CON SCROLL -->
+    <center>
+        <ScrollPane fitToWidth="true" hbarPolicy="NEVER" styleClass="scroll-pane" vbarPolicy="AS_NEEDED">
+            <VBox alignment="TOP_CENTER" spacing="25" styleClass="content-container">
+                <padding>
+                    <Insets bottom="30" left="20" right="20" top="30" />
+                </padding>
+
+                <!-- TARJETA DE PERFIL -->
+                <VBox alignment="TOP_CENTER" spacing="25" styleClass="profile-card">
+                    <padding>
+                        <Insets bottom="35" left="30" right="30" top="35" />
+                    </padding>
+
+                    <!-- Avatar y Nombre -->
+                    <VBox alignment="CENTER" spacing="18">
+                        <!-- Avatar -->
+                        <StackPane styleClass="avatar-container">
+                            <Label styleClass="avatar-text" text="B" />
+                        </StackPane>
+
+                        <!-- Nombre y Estado -->
+                        <VBox alignment="CENTER" spacing="10">
+                            <Label styleClass="profile-name" text="Bibliotecario" />
+
+                            <!-- Estado -->
+                            <HBox alignment="CENTER" spacing="8">
+                                <Label styleClass="status-indicator" text="●" />
+                                <Label styleClass="status-text" text="En línea" />
+                            </HBox>
+                        </VBox>
+                    </VBox>
+
+                    <!-- INFORMACIÓN DEL PERFIL -->
+                    <VBox spacing="20">
+
+                        <!-- Campo Nombre -->
+                        <VBox spacing="8" styleClass="info-field">
+                            <Label styleClass="field-label" text="NOMBRE COMPLETO" />
+                            <HBox alignment="CENTER_LEFT" spacing="15" styleClass="field-container">
+                                <padding>
+                                    <Insets bottom="14" left="18" right="18" top="14" />
+                                </padding>
+                                <Label styleClass="field-icon" text="👤" />
+                                <Label fx:id="lblNombre" styleClass="field-value" text="Juan Pérez García" />
+                            </HBox>
+                        </VBox>
+
+                        <!-- Campo Documento -->
+                        <VBox spacing="8" styleClass="info-field">
+                            <Label styleClass="field-label" text="DOCUMENTO" />
+                            <HBox alignment="CENTER_LEFT" spacing="15" styleClass="field-container">
+                                <padding>
+                                    <Insets bottom="14" left="18" right="18" top="14" />
+                                </padding>
+                                <Label styleClass="field-icon" text="🆔" />
+                                <Label fx:id="lblDocumento" styleClass="field-value" text="1234567890" />
+                            </HBox>
+                        </VBox>
+
+                        <!-- Campo Email -->
+                        <VBox spacing="8" styleClass="info-field">
+                            <Label styleClass="field-label" text="EMAIL" />
+                            <HBox alignment="CENTER_LEFT" spacing="15" styleClass="field-container">
+                                <padding>
+                                    <Insets bottom="14" left="18" right="18" top="14" />
+                                </padding>
+                                <Label styleClass="field-icon" text="📧" />
+                                <Label fx:id="lblEmail" styleClass="field-value" text="juan.perez@universidad.edu.co" />
+                            </HBox>
+                        </VBox>
+
+                    </VBox>
+
+                    <!-- Separador -->
+                    <Separator styleClass="profile-separator" />
+
+                    <!-- BOTÓN CERRAR SESIÓN -->
+                    <Button fx:id="btnCerrarSesion" maxWidth="Infinity" onAction="#onCerrarSesionClick" styleClass="btn-logout" text="🚪 Cerrar Sesión">
+                        <padding>
+                            <Insets bottom="14" left="24" right="24" top="14" />
+                        </padding>
+                    </Button>
+
+                </VBox>
+
+            </VBox>
+        </ScrollPane>
+    </center>
+
+</BorderPane>

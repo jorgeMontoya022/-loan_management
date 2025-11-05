@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane styleClass="root-container" stylesheets="@../styles/dashboard.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.library.prestamo_app.viewController.DashboardViewController">
+
+    <!-- HEADER -->
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="15" styleClass="header-container">
+            <padding>
+                <Insets bottom="15" left="20" right="20" top="15" />
+            </padding>
+
+            <!-- Logo y Título -->
+            <HBox alignment="CENTER_LEFT" spacing="12" HBox.hgrow="ALWAYS">
+                <Label styleClass="header-icon" text="📚" />
+                <VBox spacing="2">
+                    <Label styleClass="header-title" text="Sistema de Biblioteca" />
+                    <Label styleClass="header-subtitle" text="Panel de Control - Universidad" />
+                </VBox>
+            </HBox>
+
+            <!-- Info Bibliotecario -->
+            <HBox alignment="CENTER_RIGHT" spacing="12">
+                <VBox alignment="CENTER_RIGHT" spacing="2">
+                    <Label fx:id="labelBibliotecario" styleClass="user-name" text="Bibliotecario Actual" />
+                    <Label styleClass="user-status" text="En línea" />
+                </VBox>
+                <Button fx:id="btnPerfil" onAction="#onAbrirPerfil" styleClass="btn-profile" text="B" />
+            </HBox>
+        </HBox>
+    </top>
+
+    <!-- CONTENIDO PRINCIPAL CON SCROLL -->
+    <center>
+        <ScrollPane fitToWidth="true" hbarPolicy="NEVER" styleClass="scroll-pane" vbarPolicy="AS_NEEDED">
+            <VBox spacing="25" styleClass="content-container">
+                <padding>
+                    <Insets bottom="20" left="20" right="20" top="20" />
+                </padding>
+
+                <!-- TARJETAS DE ESTADÍSTICAS - FlowPane para responsive -->
+                <FlowPane alignment="CENTER" hgap="15" styleClass="stats-grid" vgap="15">
+
+                    <!-- Tarjeta 1: Préstamos Hoy -->
+                    <VBox styleClass="stat-card, card-purple">
+                        <padding>
+                            <Insets bottom="20" left="20" right="20" top="20" />
+                        </padding>
+                        <HBox alignment="CENTER_LEFT" spacing="15">
+                            <VBox spacing="6" HBox.hgrow="ALWAYS">
+                                <Label styleClass="stat-number" text="0" />
+                                <Label styleClass="stat-label" text="PRÉSTAMOS HOY" />
+                            </VBox>
+                            <Label styleClass="stat-icon" text="📘" />
+                        </HBox>
+                    </VBox>
+
+                    <!-- Tarjeta 2: Préstamos Activos -->
+                    <VBox styleClass="stat-card, card-green">
+                        <padding>
+                            <Insets bottom="20" left="20" right="20" top="20" />
+                        </padding>
+                        <HBox alignment="CENTER_LEFT" spacing="15">
+                            <VBox spacing="6" HBox.hgrow="ALWAYS">
+                                <Label styleClass="stat-number" text="0" />
+                                <Label styleClass="stat-label" text="PRÉSTAMOS ACTIVOS" />
+                            </VBox>
+                            <Label styleClass="stat-icon" text="📕" />
+                        </HBox>
+                    </VBox>
+
+                    <!-- Tarjeta 3: Multas Pendientes -->
+                    <VBox styleClass="stat-card, card-pink">
+                        <padding>
+                            <Insets bottom="20" left="20" right="20" top="20" />
+                        </padding>
+                        <HBox alignment="CENTER_LEFT" spacing="15">
+                            <VBox spacing="6" HBox.hgrow="ALWAYS">
+                                <Label styleClass="stat-number" text="0" />
+                                <Label styleClass="stat-label" text="MULTAS PENDIENTES" />
+                            </VBox>
+                            <Label styleClass="stat-icon" text="⚠" />
+                        </HBox>
+                    </VBox>
+
+                    <!-- Tarjeta 4: Usuarios Activos -->
+                    <VBox styleClass="stat-card, card-cyan">
+                        <padding>
+                            <Insets bottom="20" left="20" right="20" top="20" />
+                        </padding>
+                        <HBox alignment="CENTER_LEFT" spacing="15">
+                            <VBox spacing="6" HBox.hgrow="ALWAYS">
+                                <Label styleClass="stat-number" text="0" />
+                                <Label styleClass="stat-label" text="USUARIOS ACTIVOS" />
+                            </VBox>
+                            <Label styleClass="stat-icon" text="👥" />
+                        </HBox>
+                    </VBox>
+                </FlowPane>
+
+                <!-- SECCIÓN ACCIONES RÁPIDAS -->
+                <VBox spacing="18">
+                    <HBox alignment="CENTER_LEFT" spacing="10">
+                        <Label styleClass="section-icon" text="🚀" />
+                        <Label styleClass="section-title" text="Acciones Rápidas" />
+                    </HBox>
+
+                    <!-- TARJETAS DE ACCIONES - FlowPane para responsive -->
+                    <FlowPane alignment="CENTER" hgap="15" styleClass="actions-grid" vgap="15">
+
+                        <!-- Tarjeta Registrar Préstamo -->
+                        <VBox styleClass="action-card">
+                            <padding>
+                                <Insets bottom="25" left="25" right="25" top="25" />
+                            </padding>
+                            <VBox alignment="CENTER" spacing="18">
+                                <Label styleClass="action-icon, icon-purple" text="📝" />
+                                <Label styleClass="action-title" text="Registrar Préstamo" />
+                                <Label styleClass="action-description" text="Registra un nuevo préstamo de libro validando todas las reglas de negocio automáticamente" textAlignment="CENTER" wrapText="true" />
+                                <Button fx:id="btnIniciarPrestamo" onAction="#onIniciarPrestamo" styleClass="btn-action, btn-action-purple" text="Iniciar Préstamo">
+                                    <padding>
+                                        <Insets bottom="12" left="24" right="24" top="12" />
+                                    </padding>
+                                </Button>
+                            </VBox>
+                        </VBox>
+
+                        <!-- Tarjeta Gestión de Usuarios -->
+                        <VBox styleClass="action-card">
+                            <padding>
+                                <Insets bottom="25" left="25" right="25" top="25" />
+                            </padding>
+                            <VBox alignment="CENTER" spacing="18">
+                                <Label styleClass="action-icon, icon-green" text="👤" />
+                                <Label styleClass="action-title" text="Gestión de Usuarios" />
+                                <Label styleClass="action-description" text="Crear, editar, consultar y administrar los usuarios registrados en el sistema" textAlignment="CENTER" wrapText="true" />
+                                <Button fx:id="btnGestionarUsuarios" onAction="#onGestionUsuarios" styleClass="btn-action, btn-action-green" text="Gestionar Usuarios">
+                                    <padding>
+                                        <Insets bottom="12" left="24" right="24" top="12" />
+                                    </padding>
+                                </Button>
+                            </VBox>
+                        </VBox>
+
+                    </FlowPane>
+                </VBox>
+
+            </VBox>
+        </ScrollPane>
+    </center>
+
+</BorderPane>

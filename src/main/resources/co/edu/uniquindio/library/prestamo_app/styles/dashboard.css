@@ -1,0 +1,272 @@
+/* ========================
+   ESTILOS GENERALES
+   ======================== */
+
+.root-container {
+    -fx-background-color: linear-gradient(to bottom, #7C3AED 0%, #6366F1 100%);
+}
+
+/* ========================
+   HEADER
+   ======================== */
+
+.header-container {
+    -fx-background-color: white;
+    -fx-background-radius: 0;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0, 0, 2);
+}
+
+.header-icon {
+    -fx-font-size: 28px;
+}
+
+.header-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1F2937;
+}
+
+.header-subtitle {
+    -fx-font-size: 12px;
+    -fx-text-fill: #6B7280;
+}
+
+.user-name {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1F2937;
+}
+
+.user-status {
+    -fx-font-size: 11px;
+    -fx-text-fill: #10B981;
+}
+
+.btn-profile {
+    -fx-background-color: #7C3AED;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 50%;
+    -fx-min-width: 45px;
+    -fx-min-height: 45px;
+    -fx-max-width: 45px;
+    -fx-max-height: 45px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(124, 58, 237, 0.3), 8, 0, 0, 2);
+}
+
+.btn-profile:hover {
+    -fx-background-color: #6D28D9;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+/* ========================
+   CONTENIDO PRINCIPAL
+   ======================== */
+
+.content-container {
+    -fx-background-color: transparent;
+}
+
+/* ========================
+   TARJETAS DE ESTADÍSTICAS
+   ======================== */
+
+.stats-grid {
+    -fx-hgap: 15;
+    -fx-vgap: 15;
+}
+
+.stat-card {
+    -fx-background-radius: 16px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 15, 0, 0, 4);
+    -fx-cursor: hand;
+    -fx-min-width: 200px;
+    -fx-pref-width: 250px;
+    -fx-max-width: 320px;
+}
+
+.stat-card:hover {
+    -fx-translate-y: -4;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 20, 0, 0, 6);
+}
+
+.card-purple {
+    -fx-background-color: white;
+}
+
+.card-green {
+    -fx-background-color: white;
+}
+
+.card-pink {
+    -fx-background-color: white;
+}
+
+.card-cyan {
+    -fx-background-color: white;
+}
+
+.stat-number {
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1F2937;
+}
+
+.stat-label {
+    -fx-font-size: 11px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #9CA3AF;
+    -fx-letter-spacing: 0.5px;
+}
+
+.stat-icon {
+    -fx-font-size: 48px;
+    -fx-opacity: 1.0;
+}
+
+.card-purple .stat-icon {
+    -fx-background-color: #DDD6FE;
+    -fx-background-radius: 16px;
+    -fx-padding: 12;
+}
+
+.card-green .stat-icon {
+    -fx-background-color: #A7F3D0;
+    -fx-background-radius: 16px;
+    -fx-padding: 12;
+}
+
+.card-pink .stat-icon {
+    -fx-background-color: #FBCFE8;
+    -fx-background-radius: 16px;
+    -fx-padding: 12;
+}
+
+.card-cyan .stat-icon {
+    -fx-background-color: #A5F3FC;
+    -fx-background-radius: 16px;
+    -fx-padding: 12;
+}
+
+/* ========================
+   SECCIÓN DE ACCIONES
+   ======================== */
+
+.section-icon {
+    -fx-font-size: 24px;
+}
+
+.section-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.actions-grid {
+    -fx-hgap: 15;
+    -fx-vgap: 15;
+}
+
+.action-card {
+    -fx-background-color: white;
+    -fx-background-radius: 20px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 15, 0, 0, 4);
+    -fx-min-height: 280px;
+    -fx-min-width: 300px;
+    -fx-pref-width: 400px;
+    -fx-max-width: 500px;
+}
+
+.action-card:hover {
+    -fx-translate-y: -4;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 20, 0, 0, 6);
+}
+
+.action-icon {
+    -fx-font-size: 56px;
+    -fx-background-radius: 20px;
+    -fx-padding: 18;
+}
+
+.icon-purple {
+    -fx-background-color: #DDD6FE;
+}
+
+.icon-green {
+    -fx-background-color: #A7F3D0;
+}
+
+.action-title {
+    -fx-font-size: 19px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1F2937;
+}
+
+.action-description {
+    -fx-font-size: 13px;
+    -fx-text-fill: #6B7280;
+    -fx-line-spacing: 2px;
+}
+
+/* ========================
+   BOTONES DE ACCIÓN
+   ======================== */
+
+.btn-action {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-background-radius: 12px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 8, 0, 0, 2);
+}
+
+.btn-action:hover {
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 12, 0, 0, 4);
+}
+
+.btn-action-purple {
+    -fx-background-color: #7C3AED;
+}
+
+.btn-action-purple:hover {
+    -fx-background-color: #6D28D9;
+}
+
+.btn-action-green {
+    -fx-background-color: #10B981;
+}
+
+.btn-action-green:hover {
+    -fx-background-color: #059669;
+}
+
+/* ========================
+   SCROLL PANE
+   ======================== */
+
+.scroll-pane {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+}
+
+.scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane .content {
+    -fx-background-color: transparent;
+}
+
+/* ========================
+   RESPONSIVE ADAPTATIONS
+   ======================== */
+
+/* Las tarjetas se ajustarán automáticamente
+   gracias a las propiedades min/pref/max width
+   y al uso de FlowPane en lugar de GridPane */

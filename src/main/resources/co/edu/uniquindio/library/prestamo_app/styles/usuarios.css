@@ -1,12 +1,13 @@
-/* =================== CONTENEDOR PRINCIPAL =================== */
+/* ==================== CONTENEDOR RAÍZ ==================== */
 .root-container {
-    -fx-background-color: #F3F4F6;
+    -fx-background-color: #F5F7FA;
 }
 
-/* =================== HEADER =================== */
+/* ==================== HEADER ==================== */
 .header-container {
-    -fx-background-color: linear-gradient(to right, #6366F1, #8B5CF6);
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0, 0, 2);
+    -fx-background-color: white;
+    -fx-border-color: #E5E7EB;
+    -fx-border-width: 0 0 1 0;
 }
 
 .header-icon {
@@ -16,82 +17,73 @@
 .header-title {
     -fx-font-size: 28px;
     -fx-font-weight: bold;
-    -fx-text-fill: white;
+    -fx-text-fill: #1F2937;
 }
 
-/* =================== BOTONES =================== */
+/* ==================== BOTONES PRINCIPALES ==================== */
 .btn-primary {
     -fx-background-color: #6366F1;
     -fx-text-fill: white;
+    -fx-background-radius: 10;
     -fx-font-size: 14px;
-    -fx-font-weight: 600;
-    -fx-background-radius: 8px;
+    -fx-font-weight: bold;
     -fx-cursor: hand;
-    -fx-effect: dropshadow(gaussian, rgba(99, 102, 241, 0.3), 8, 0, 0, 2);
 }
 
 .btn-primary:hover {
     -fx-background-color: #4F46E5;
-    -fx-effect: dropshadow(gaussian, rgba(99, 102, 241, 0.5), 12, 0, 0, 4);
 }
 
 .btn-secondary {
-    -fx-background-color: white;
-    -fx-text-fill: #6366F1;
+    -fx-background-color: #F3F4F6;
+    -fx-text-fill: #374151;
+    -fx-background-radius: 10;
     -fx-font-size: 14px;
-    -fx-font-weight: 600;
-    -fx-background-radius: 8px;
+    -fx-font-weight: bold;
     -fx-cursor: hand;
-    -fx-border-color: rgba(255, 255, 255, 0.3);
-    -fx-border-width: 1px;
-    -fx-border-radius: 8px;
 }
 
 .btn-secondary:hover {
-    -fx-background-color: rgba(255, 255, 255, 0.9);
+    -fx-background-color: #E5E7EB;
 }
 
-/* =================== CONTENIDO =================== */
+/* ==================== CONTENEDOR DE CONTENIDO ==================== */
 .content-container {
     -fx-background-color: transparent;
 }
 
-/* =================== BÚSQUEDA =================== */
+/* ==================== BÚSQUEDA ==================== */
 .search-container {
     -fx-background-color: white;
-    -fx-background-radius: 10px;
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.05), 5, 0, 0, 1);
+    -fx-background-radius: 25;
+    -fx-border-color: #E0E0E0;
+    -fx-border-width: 1;
+    -fx-border-radius: 25;
 }
 
 .search-icon {
     -fx-font-size: 18px;
-    -fx-text-fill: #9CA3AF;
 }
 
 .search-field {
     -fx-background-color: transparent;
-    -fx-border-color: transparent;
+    -fx-border-width: 0;
     -fx-font-size: 14px;
-    -fx-text-fill: #111827;
-    -fx-prompt-text-fill: #9CA3AF;
 }
 
 .search-field:focused {
-    -fx-border-color: transparent;
     -fx-background-color: transparent;
 }
 
-/* =================== TABLA =================== */
+/* ==================== TABLA ==================== */
 .table-usuarios {
     -fx-background-color: white;
-    -fx-background-radius: 12px;
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.05), 8, 0, 0, 2);
-    -fx-padding: 0;
+    -fx-background-radius: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);
 }
 
-/* Header de la tabla */
 .table-usuarios .column-header-background {
-    -fx-background-color: linear-gradient(to bottom, #6366F1, #5B5FC7);
+    -fx-background-color: #6366F1;
 }
 
 .table-usuarios .column-header {
@@ -102,112 +94,129 @@
     -fx-text-fill: white;
     -fx-font-weight: bold;
     -fx-font-size: 12px;
-    -fx-padding: 15px 10px;
+    -fx-padding: 15 10;
 }
 
-/* Celdas de la tabla */
 .table-usuarios .table-cell {
-    -fx-padding: 12px 10px;
-    -fx-border-color: transparent transparent #F3F4F6 transparent;
-    -fx-border-width: 0 0 1px 0;
-    -fx-font-size: 14px;
-    -fx-text-fill: #374151;
+    -fx-border-color: transparent;
+    -fx-padding: 12 10;
 }
 
 .table-usuarios .table-row-cell {
     -fx-background-color: white;
+    -fx-border-color: transparent;
 }
 
 .table-usuarios .table-row-cell:odd {
     -fx-background-color: #F9FAFB;
 }
 
-.table-usuarios .table-row-cell:selected {
+.table-usuarios .table-row-cell:hover {
     -fx-background-color: #EEF2FF;
 }
 
-.table-usuarios .table-row-cell:hover {
-    -fx-background-color: #F3F4F6;
-    -fx-cursor: hand;
+.table-usuarios .table-row-cell:selected {
+    -fx-background-color: #E0E7FF;
 }
 
-/* Columnas específicas */
+/* ==================== COLUMNAS ESPECÍFICAS ==================== */
 .col-id .table-cell {
-    -fx-font-weight: 600;
-    -fx-text-fill: #6366F1;
-}
-
-.col-nombre .table-cell {
-    -fx-font-weight: 600;
-    -fx-text-fill: #111827;
-}
-
-.col-email .table-cell {
+    -fx-alignment: CENTER;
+    -fx-font-weight: bold;
     -fx-text-fill: #6B7280;
 }
 
-/* =================== BADGES DE ESTADO =================== */
-.badge-activo {
+.col-nombre .table-cell {
+    -fx-font-weight: bold;
+    -fx-text-fill: #1F2937;
+}
+
+.col-documento .table-cell {
+    -fx-alignment: CENTER;
+    -fx-text-fill: #4B5563;
+}
+
+.col-programa .table-cell {
+    -fx-text-fill: #6B7280;
+}
+
+.col-email .table-cell {
+    -fx-text-fill: #6366F1;
+}
+
+.col-estado .table-cell {
+    -fx-alignment: CENTER;
+}
+
+.col-acciones .table-cell {
+    -fx-alignment: CENTER;
+}
+
+/* ==================== BADGES DE ESTADO ==================== */
+.badge-estado {
+    -fx-padding: 6 16;
+    -fx-background-radius: 15;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+/* Estado ACTIVO - Verde */
+.badge-estado-activo {
     -fx-background-color: #D1FAE5;
     -fx-text-fill: #065F46;
-    -fx-padding: 5px 12px;
-    -fx-background-radius: 12px;
-    -fx-font-weight: 600;
-    -fx-font-size: 12px;
 }
 
-.badge-inactivo {
+/* Estado INACTIVO - Rojo */
+.badge-estado-inactivo {
     -fx-background-color: #FEE2E2;
     -fx-text-fill: #991B1B;
-    -fx-padding: 5px 12px;
-    -fx-background-radius: 12px;
-    -fx-font-weight: 600;
-    -fx-font-size: 12px;
 }
 
-.badge-suspendido {
+/* Estado SUSPENDIDO - Amarillo */
+.badge-estado-suspendido {
     -fx-background-color: #FEF3C7;
     -fx-text-fill: #92400E;
-    -fx-padding: 5px 12px;
-    -fx-background-radius: 12px;
-    -fx-font-weight: 600;
-    -fx-font-size: 12px;
 }
 
-/* =================== BOTONES DE ACCIÓN =================== */
-.btn-editar {
-    -fx-background-color: #DBEAFE;
-    -fx-text-fill: #1E40AF;
-    -fx-font-size: 13px;
-    -fx-font-weight: 600;
-    -fx-background-radius: 6px;
+/* ==================== BOTONES DE ACCIÓN ==================== */
+.action-buttons-container {
+    -fx-spacing: 8;
+    -fx-alignment: CENTER;
+}
+
+/* Botón Editar - Azul */
+.btn-action-editar {
+    -fx-background-color: #3B82F6;
+    -fx-text-fill: white;
+    -fx-background-radius: 8;
     -fx-cursor: hand;
-    -fx-padding: 6px 12px;
+    -fx-padding: 8 12;
+    -fx-font-size: 14px;
 }
 
-.btn-editar:hover {
-    -fx-background-color: #BFDBFE;
+.btn-action-editar:hover {
+    -fx-background-color: #2563EB;
 }
 
-.btn-inactivar {
-    -fx-background-color: #FEE2E2;
-    -fx-text-fill: #991B1B;
-    -fx-font-size: 13px;
-    -fx-font-weight: 600;
-    -fx-background-radius: 6px;
+/* Botón Inactivar - Rojo */
+.btn-action-inactivar {
+    -fx-background-color: #EF4444;
+    -fx-text-fill: white;
+    -fx-background-radius: 8;
     -fx-cursor: hand;
-    -fx-padding: 6px 12px;
+    -fx-padding: 8 12;
+    -fx-font-size: 14px;
 }
 
-.btn-inactivar:hover {
-    -fx-background-color: #FECACA;
+.btn-action-inactivar:hover {
+    -fx-background-color: #DC2626;
 }
 
-/* =================== ESTADO VACÍO =================== */
+/* ==================== MENSAJES VACÍO ==================== */
 .empty-message {
     -fx-font-size: 18px;
-    -fx-font-weight: 600;
-    -fx-text-fill: #374151;
+    -fx-font-weight: bold;
+    -fx-text-fill: #6B7280;
 }
 
 .empty-hint {
@@ -215,25 +224,24 @@
     -fx-text-fill: #9CA3AF;
 }
 
-/* =================== PAGINACIÓN =================== */
+/* ==================== PAGINACIÓN ==================== */
 .pagination-container {
     -fx-background-color: white;
-    -fx-background-radius: 8px;
-    -fx-padding: 10px 20px;
+    -fx-background-radius: 10;
+    -fx-padding: 10 20;
 }
 
 .pagination-text {
-    -fx-font-size: 14px;
+    -fx-font-size: 13px;
     -fx-text-fill: #6B7280;
 }
 
 .btn-pagination {
     -fx-background-color: #F3F4F6;
     -fx-text-fill: #374151;
-    -fx-font-size: 14px;
-    -fx-font-weight: 600;
-    -fx-background-radius: 6px;
+    -fx-background-radius: 8;
     -fx-cursor: hand;
+    -fx-font-weight: bold;
 }
 
 .btn-pagination:hover {
@@ -247,53 +255,16 @@
 
 .page-number {
     -fx-font-size: 14px;
-    -fx-font-weight: 700;
+    -fx-font-weight: bold;
     -fx-text-fill: #6366F1;
 }
 
-.page-separator,
-.page-total {
+.page-separator {
     -fx-font-size: 14px;
     -fx-text-fill: #9CA3AF;
 }
 
-/* =================== SCROLLBAR =================== */
-.table-usuarios .scroll-bar:vertical {
-    -fx-background-color: transparent;
-}
-
-.table-usuarios .scroll-bar:vertical .thumb {
-    -fx-background-color: #D1D5DB;
-    -fx-background-radius: 5px;
-}
-
-.table-usuarios .scroll-bar:vertical .thumb:hover {
-    -fx-background-color: #9CA3AF;
-}
-
-.table-usuarios .scroll-bar:vertical .increment-button,
-.table-usuarios .scroll-bar:vertical .decrement-button {
-    -fx-background-color: transparent;
-    -fx-padding: 0;
-}
-
-/* =================== RESPONSIVE (Opcional) =================== */
-@media screen and (max-width: 1200px) {
-    .header-title {
-        -fx-font-size: 24px;
-    }
-
-    .col-email {
-        -fx-pref-width: 180px;
-    }
-}
-
-@media screen and (max-width: 900px) {
-    .header-title {
-        -fx-font-size: 20px;
-    }
-
-    .col-programa {
-        -fx-pref-width: 120px;
-    }
+.page-total {
+    -fx-font-size: 14px;
+    -fx-text-fill: #6B7280;
 }

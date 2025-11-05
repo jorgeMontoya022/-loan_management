@@ -45,7 +45,7 @@ public class BibliotecaUtil {
     private static void initializeBibliotecarios(Biblioteca biblioteca) {
         Bibliotecario anaTorres = new Bibliotecario(
                 "Ana Torres",
-                "B-123",
+                "1096890233",
                 "ana.torres@uq.edu.co",
                 "1234",
                 "ana.torres"
@@ -53,7 +53,7 @@ public class BibliotecaUtil {
 
         Bibliotecario carlosMejia = new Bibliotecario(
                 "Carlos Mejía",
-                "B-456",
+                "1084367282",
                 "carlos.mejia@uq.edu.co",
                 "abcd",
                 "carlos.mejia"
@@ -71,7 +71,7 @@ public class BibliotecaUtil {
         // Usuario 1: Activo
         Usuario lauraPerez = new Usuario(
                 "Laura Pérez",
-                "U-111",
+                "1097899355",
                 "Ingeniería de Sistemas",
                 "laura.perez@uq.edu.co"
         );
@@ -79,7 +79,7 @@ public class BibliotecaUtil {
         // Usuario 2: Activo
         Usuario mateoRamirez = new Usuario(
                 "Mateo Ramírez",
-                "U-222",
+                "12983272232",
                 "Administración",
                 "mateo.ramirez@uq.edu.co"
         );
@@ -87,7 +87,7 @@ public class BibliotecaUtil {
         // Usuario 3: Inactivo
         Usuario sofiaLopez = new Usuario(
                 "Sofía López",
-                "U-333",
+                "1096034577",
                 "Contaduría",
                 "sofia.lopez@uq.edu.co"
         );

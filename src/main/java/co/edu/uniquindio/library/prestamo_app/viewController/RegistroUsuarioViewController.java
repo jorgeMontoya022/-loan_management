@@ -57,7 +57,7 @@ public class RegistroUsuarioViewController extends CoreViewController{
 
     @FXML
     void onCancelar(ActionEvent event) {
-        closeWindow(event);
+        browseWindow("/co/edu/uniquindio/library/prestamo_app/view/gestion-usuario-view.fxml", "Gestión usuarios", event);
 
 
     }

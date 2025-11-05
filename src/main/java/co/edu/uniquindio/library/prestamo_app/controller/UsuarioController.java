@@ -3,6 +3,8 @@ package co.edu.uniquindio.library.prestamo_app.controller;
 import co.edu.uniquindio.library.prestamo_app.factory.ModelFactory;
 import co.edu.uniquindio.library.prestamo_app.model.Usuario;
 
+import java.util.List;
+
 public class UsuarioController {
     ModelFactory modelFactory;
 
@@ -12,5 +14,9 @@ public class UsuarioController {
 
     public boolean agregarUsuario(Usuario usuario) {
         return modelFactory.agregarUsuario(usuario);
+    }
+
+    public List<Usuario> getUsuarios() {
+        return modelFactory.getUsuarios();
     }
 }

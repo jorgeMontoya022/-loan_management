@@ -85,11 +85,11 @@
                 </HBox>
                 <HBox spacing="5" styleClass="demo-info">
                     <Label styleClass="demo-label" text="Usuario:" />
-                    <Label styleClass="demo-value" text="admin" />
+                    <Label styleClass="demo-value" text="1097022744" />
                 </HBox>
                 <HBox spacing="5" styleClass="demo-info">
                     <Label styleClass="demo-label" text="Contraseña:" />
-                    <Label styleClass="demo-value" text="admin123" />
+                    <Label styleClass="demo-value" text="cont1234" />
                 </HBox>
             </VBox>
 

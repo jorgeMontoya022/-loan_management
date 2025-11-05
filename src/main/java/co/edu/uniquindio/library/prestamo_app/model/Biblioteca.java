@@ -218,6 +218,9 @@ public class Biblioteca implements Serializable {
                 .orElse(null);
     }
 
+
+
+
     private Bibliotecario buscarBibliotecarioPorEmail(String email) {
         return bibliotecarios.stream()
                 .filter(b -> b.getEmail().equalsIgnoreCase(email))
@@ -508,6 +511,28 @@ public class Biblioteca implements Serializable {
     }
 
 
+    public Bibliotecario validarAcceso(String usuario, String password) throws Exception{
+
+        for (Bibliotecario bibliotecario: bibliotecarios) {
+            if(buscarBibliotecarioPorDoc(usuario)) {
+                if(bibliotecario.getDocumento().equals(usuario) && bibliotecario.getContrasenia().equals(password)) {
+                    return bibliotecario;
+                }
+            } else {
+                throw new Exception("El usuario no existe");
+            }
+        }
+        throw new Exception("Identificación o documento de identidad incorrecto");
+    }
+
+    private boolean buscarBibliotecarioPorDoc(String usuario) {
+        for (Bibliotecario bibliotecario: bibliotecarios) {
+            if (bibliotecario.getDocumento().equals(usuario)) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
 
 

@@ -1,0 +1,249 @@
+/* ========================
+   ESTILOS GENERALES
+   ======================== */
+
+.root-container {
+    -fx-background-color: linear-gradient(to bottom, #7C3AED 0%, #6366F1 100%);
+}
+
+/* ========================
+   HEADER
+   ======================== */
+
+.header-container {
+    -fx-background-color: white;
+    -fx-background-radius: 0px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0, 0, 2);
+}
+
+.header-icon {
+    -fx-font-size: 28px;
+}
+
+.header-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1F2937;
+}
+
+.btn-secondary {
+    -fx-background-color: #F3F4F6;
+    -fx-text-fill: #4B5563;
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+    -fx-background-radius: 10px;
+    -fx-cursor: hand;
+    -fx-border-color: transparent;
+}
+
+.btn-secondary:hover {
+    -fx-background-color: #E5E7EB;
+    -fx-text-fill: #1F2937;
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+}
+
+/* ========================
+   CONTENIDO PRINCIPAL
+   ======================== */
+
+.content-container {
+    -fx-background-color: transparent;
+}
+
+/* ========================
+   SCROLL PANE
+   ======================== */
+
+.scroll-pane {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+}
+
+.scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane .content {
+    -fx-background-color: transparent;
+}
+
+/* ========================
+   TARJETA DE PERFIL
+   ======================== */
+
+.profile-card {
+    -fx-background-color: white;
+    -fx-background-radius: 24px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.12), 20, 0, 0, 4);
+    -fx-min-width: 320px;
+    -fx-pref-width: 550px;
+    -fx-max-width: 650px;
+}
+
+/* ========================
+   AVATAR
+   ======================== */
+
+.avatar-container {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #7C3AED 0%, #6366F1 100%);
+    -fx-background-radius: 70px;
+    -fx-min-width: 110px;
+    -fx-min-height: 110px;
+    -fx-max-width: 110px;
+    -fx-max-height: 110px;
+    -fx-effect: dropshadow(gaussian, rgba(124, 58, 237, 0.4), 15, 0, 0, 4);
+}
+
+.avatar-text {
+    -fx-font-size: 52px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+/* ========================
+   NOMBRE Y ESTADO
+   ======================== */
+
+.profile-name {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1F2937;
+}
+
+.status-indicator {
+    -fx-font-size: 10px;
+    -fx-text-fill: #10B981;
+}
+
+.status-text {
+    -fx-font-size: 13px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #10B981;
+}
+
+/* ========================
+   SEPARADOR
+   ======================== */
+
+.profile-separator {
+    -fx-background-color: #E5E7EB;
+    -fx-pref-height: 1px;
+}
+
+/* ========================
+   CAMPOS DE INFORMACIÓN
+   ======================== */
+
+.info-field {
+    -fx-spacing: 8;
+}
+
+.field-label {
+    -fx-font-size: 11px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #6B7280;
+    -fx-letter-spacing: 0.5px;
+}
+
+.field-container {
+    -fx-background-color: #F9FAFB;
+    -fx-background-radius: 12px;
+    -fx-border-color: #E5E7EB;
+    -fx-border-width: 1px;
+    -fx-border-radius: 12px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.02), 4, 0, 0, 1);
+}
+
+.field-container:hover {
+    -fx-background-color: #F3F4F6;
+    -fx-border-color: #D1D5DB;
+}
+
+.field-icon {
+    -fx-font-size: 22px;
+    -fx-opacity: 1.0;
+    -fx-text-fill: #1F2937;
+}
+
+.field-value {
+    -fx-font-size: 15px;
+    -fx-font-weight: 500;
+    -fx-text-fill: #1F2937;
+}
+
+/* ========================
+   ESTADÍSTICAS RÁPIDAS
+   ======================== */
+
+.stats-container {
+    -fx-background-color: #F9FAFB;
+    -fx-background-radius: 16px;
+    -fx-border-color: #E5E7EB;
+    -fx-border-width: 1px;
+    -fx-border-radius: 16px;
+}
+
+.stat-box {
+    -fx-alignment: CENTER;
+}
+
+.stat-number {
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #7C3AED;
+}
+
+.stat-label {
+    -fx-font-size: 11px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #6B7280;
+    -fx-letter-spacing: 0.3px;
+}
+
+.stats-divider {
+    -fx-background-color: #E5E7EB;
+    -fx-pref-width: 1px;
+}
+
+/* ========================
+   BOTÓN CERRAR SESIÓN
+   ======================== */
+
+.btn-logout {
+    -fx-background-color: #EF4444;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 12px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(239, 68, 68, 0.3), 10, 0, 0, 2);
+}
+
+.btn-logout:hover {
+    -fx-background-color: #DC2626;
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+    -fx-effect: dropshadow(gaussian, rgba(239, 68, 68, 0.4), 15, 0, 0, 4);
+}
+
+/* ========================
+   BADGE ROL
+   ======================== */
+
+.role-badge {
+    -fx-background-color: #EDE9FE;
+    -fx-background-radius: 20px;
+    -fx-text-fill: #7C3AED;
+    -fx-font-size: 12px;
+    -fx-font-weight: 700;
+    -fx-padding: 6 16 6 16;
+}
+
+/* ========================
+   RESPONSIVE ADAPTATIONS
+   ======================== */
+
+/* Los elementos se ajustarán automáticamente
+   gracias a las propiedades min/pref/max width
+   y al uso de ScrollPane */
