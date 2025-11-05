@@ -2,6 +2,10 @@ package co.edu.uniquindio.library.prestamo_app.viewController;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import co.edu.uniquindio.library.prestamo_app.controller.PrestamoController;
+import co.edu.uniquindio.library.prestamo_app.model.Bibliotecario;
+import co.edu.uniquindio.library.prestamo_app.session.Sesion;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -10,6 +14,9 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 
 public class RegistroPrestamoViewController {
+
+    PrestamoController prestamoController;
+    Bibliotecario logginBibliotecario;
 
     @FXML
     private ResourceBundle resources;
@@ -107,6 +114,8 @@ public class RegistroPrestamoViewController {
 
     @FXML
     void initialize() {
+        prestamoController = new PrestamoController();
+        logginBibliotecario = (Bibliotecario) Sesion.getInstance().getBibliotecario();
 
 
 

@@ -47,6 +47,7 @@ public class DashboardViewController extends CoreViewController{
 
     @FXML
     void onIniciarPrestamo(ActionEvent event) {
+        browseWindow("/co/edu/uniquindio/library/prestamo_app/view/gestion-prestamos-view.fxml", "Gestión prestamos", event);
 
     }
 
