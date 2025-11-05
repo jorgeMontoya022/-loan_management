@@ -13,7 +13,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 
-public class RegistroPrestamoViewController {
+public class RegistroPrestamoViewController extends CoreViewController {
 
     PrestamoController prestamoController;
     Bibliotecario logginBibliotecario;
@@ -99,6 +99,8 @@ public class RegistroPrestamoViewController {
 
     @FXML
     void onCancelar(ActionEvent event) {
+        txtBuscarEjemplar.clear();
+        txtBuscarUsuario.clear();
 
     }
 
@@ -109,6 +111,7 @@ public class RegistroPrestamoViewController {
 
     @FXML
     void onVolver(ActionEvent event) {
+        browseWindow("/co/edu/uniquindio/library/prestamo_app/view/gestion-prestamos-view.fxml", "Gestión prestamos", event);
 
     }
 
@@ -116,8 +119,6 @@ public class RegistroPrestamoViewController {
     void initialize() {
         prestamoController = new PrestamoController();
         logginBibliotecario = (Bibliotecario) Sesion.getInstance().getBibliotecario();
-
-
 
     }
 

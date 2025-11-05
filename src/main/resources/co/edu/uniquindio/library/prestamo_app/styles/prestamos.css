@@ -1,0 +1,267 @@
+/* ==================== CONTENEDOR RAÍZ ==================== */
+.root-container {
+    -fx-background-color: #F5F7FA;
+}
+
+/* ==================== HEADER ==================== */
+.header-container {
+    -fx-background-color: white;
+    -fx-border-color: #E5E7EB;
+    -fx-border-width: 0 0 1 0;
+}
+
+.header-icon {
+    -fx-font-size: 32px;
+}
+
+.header-title {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1F2937;
+}
+
+/* ==================== BOTONES PRINCIPALES ==================== */
+.btn-primary {
+    -fx-background-color: #6366F1;
+    -fx-text-fill: white;
+    -fx-background-radius: 10;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.btn-primary:hover {
+    -fx-background-color: #4F46E5;
+}
+
+.btn-secondary {
+    -fx-background-color: #F3F4F6;
+    -fx-text-fill: #374151;
+    -fx-background-radius: 10;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.btn-secondary:hover {
+    -fx-background-color: #E5E7EB;
+}
+
+/* ==================== CONTENEDOR DE CONTENIDO ==================== */
+.content-container {
+    -fx-background-color: transparent;
+}
+
+/* ==================== BÚSQUEDA ==================== */
+.search-container {
+    -fx-background-color: white;
+    -fx-background-radius: 25;
+    -fx-border-color: #E0E0E0;
+    -fx-border-width: 1;
+    -fx-border-radius: 25;
+}
+
+.search-icon {
+    -fx-font-size: 18px;
+}
+
+.search-field {
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+    -fx-font-size: 14px;
+}
+
+.search-field:focused {
+    -fx-background-color: transparent;
+}
+
+/* ==================== TABLA ==================== */
+.table-prestamos {
+    -fx-background-color: white;
+    -fx-background-radius: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);
+}
+
+.table-prestamos .column-header-background {
+    -fx-background-color: #6366F1;
+}
+
+.table-prestamos .column-header {
+    -fx-background-color: transparent;
+}
+
+.table-prestamos .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+    -fx-padding: 15 10;
+}
+
+.table-prestamos .table-cell {
+    -fx-border-color: transparent;
+    -fx-padding: 12 10;
+}
+
+.table-prestamos .table-row-cell {
+    -fx-background-color: white;
+    -fx-border-color: transparent;
+}
+
+.table-prestamos .table-row-cell:odd {
+    -fx-background-color: #F9FAFB;
+}
+
+.table-prestamos .table-row-cell:hover {
+    -fx-background-color: #EEF2FF;
+}
+
+.table-prestamos .table-row-cell:selected {
+    -fx-background-color: #E0E7FF;
+}
+
+/* ==================== COLUMNAS ESPECÍFICAS ==================== */
+.col-id .table-cell {
+    -fx-alignment: CENTER;
+    -fx-font-weight: bold;
+    -fx-text-fill: #6B7280;
+}
+
+.col-usuario .table-cell {
+    -fx-font-weight: bold;
+    -fx-text-fill: #1F2937;
+}
+
+.col-ejemplar .table-cell {
+    -fx-alignment: CENTER;
+    -fx-text-fill: #4B5563;
+}
+
+.col-bibliotecario .table-cell {
+    -fx-text-fill: #6B7280;
+}
+
+.col-fecha .table-cell {
+    -fx-text-fill: #6366F1;
+}
+
+.col-estado .table-cell {
+    -fx-alignment: CENTER;
+}
+
+
+/* ==================== BADGES DE ESTADO ==================== */
+.badge-estado {
+    -fx-padding: 6 16;
+    -fx-background-radius: 15;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+/* Estado ACTIVO - Verde */
+.badge-estado-activo {
+    -fx-background-color: #DBEAFE;
+    -fx-text-fill: blue;
+}
+
+/* Estado INACTIVO - Rojo */
+.badge-estado-cerrado {
+    -fx-background-color: #D1FAE5;
+    -fx-text-fill: #065F46;
+}
+
+/* Estado SUSPENDIDO - Amarillo */
+.badge-estado-moroso {
+    -fx-background-color: #FEE2E2;
+    -fx-text-fill: red;
+}
+
+/* ==================== BOTONES DE ACCIÓN ==================== */
+.action-buttons-container {
+    -fx-spacing: 8;
+    -fx-alignment: CENTER;
+}
+
+/* Botón Editar - Azul */
+.btn-action-editar {
+    -fx-background-color: #3B82F6;
+    -fx-text-fill: white;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+    -fx-padding: 8 12;
+    -fx-font-size: 14px;
+}
+
+.btn-action-editar:hover {
+    -fx-background-color: #2563EB;
+}
+
+/* Botón Inactivar - Rojo */
+.btn-action-inactivar {
+    -fx-background-color: #EF4444;
+    -fx-text-fill: white;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+    -fx-padding: 8 12;
+    -fx-font-size: 14px;
+}
+
+.btn-action-inactivar:hover {
+    -fx-background-color: #DC2626;
+}
+
+/* ==================== MENSAJES VACÍO ==================== */
+.empty-message {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #6B7280;
+}
+
+.empty-hint {
+    -fx-font-size: 14px;
+    -fx-text-fill: #9CA3AF;
+}
+
+/* ==================== PAGINACIÓN ==================== */
+.pagination-container {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-padding: 10 20;
+}
+
+.pagination-text {
+    -fx-font-size: 13px;
+    -fx-text-fill: #6B7280;
+}
+
+.btn-pagination {
+    -fx-background-color: #F3F4F6;
+    -fx-text-fill: #374151;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+    -fx-font-weight: bold;
+}
+
+.btn-pagination:hover {
+    -fx-background-color: #E5E7EB;
+}
+
+.btn-pagination:disabled {
+    -fx-opacity: 0.5;
+    -fx-cursor: default;
+}
+
+.page-number {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #6366F1;
+}
+
+.page-separator {
+    -fx-font-size: 14px;
+    -fx-text-fill: #9CA3AF;
+}
+
+.page-total {
+    -fx-font-size: 14px;
+    -fx-text-fill: #6B7280;
+}

@@ -28,7 +28,7 @@
 
 /* ==================== HEADER ==================== */
 .header-container {
-    -fx-background-color: linear-gradient(to right, #6B73FF, #000DFF);
+    -fx-background-color: linear-gradient(to right, white, white);
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 15, 0, 0, 3);
 }
 
@@ -39,12 +39,12 @@
 .header-title {
     -fx-font-size: 28px;
     -fx-font-weight: bold;
-    -fx-text-fill: white;
+    -fx-text-fill: #1F2937;
 }
 
 /* ==================== BOTONES PRINCIPALES ==================== */
 .btn-primary {
-    -fx-background-color: linear-gradient(to right, #6B73FF, #000DFF);
+    -fx-background-color: linear-gradient(to right, #6366F1, #8B5CF6);
     -fx-text-fill: white;
     -fx-font-size: 15px;
     -fx-font-weight: 700;
@@ -59,8 +59,8 @@
 }
 
 .btn-secondary {
-    -fx-background-color: white;
-    -fx-text-fill: #6B73FF;
+    -fx-background-color: #F3F4F6;
+    -fx-text-fill: #6B7280;
     -fx-font-size: 14px;
     -fx-font-weight: 600;
     -fx-background-radius: 10px;
@@ -69,7 +69,10 @@
 }
 
 .btn-secondary:hover {
-    -fx-background-color: rgba(255, 255, 255, 0.95);
+    -fx-background-color: #E5E7EB;
+    -fx-text-fill: #1F2937;
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
 }
 
 /* ==================== CONTENEDORES DE PASOS ==================== */
@@ -170,7 +173,7 @@
 }
 
 .btn-search {
-    -fx-background-color: linear-gradient(to right, #6B73FF, #000DFF);
+    -fx-background-color: linear-gradient(to right, #6366F1, #8B5CF6);
     -fx-text-fill: white;
     -fx-font-size: 15px;
     -fx-font-weight: 700;
@@ -180,7 +183,7 @@
 }
 
 .btn-search:hover {
-    -fx-background-color: linear-gradient(to right, #5B63EF, #000BEF);
+    -fx-background-color: linear-gradient(to right, #4F46E5, #7C3AED);
     -fx-effect: dropshadow(gaussian, rgba(107, 115, 255, 0.5), 14, 0, 0, 5);
 }
 

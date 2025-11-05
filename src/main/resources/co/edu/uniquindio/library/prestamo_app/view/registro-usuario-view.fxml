@@ -9,6 +9,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
+<?import javafx.geometry.Insets?>
 <VBox spacing="0" styleClass="dialog-container" stylesheets="@../styles/registro-usuario.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.library.prestamo_app.viewController.RegistroUsuarioViewController">
 
     <!-- HEADER -->
@@ -25,7 +26,11 @@
         <Region HBox.hgrow="ALWAYS" />
 
         <!-- BOTÓN CERRAR -->
-        <Button fx:id="btnCerrar" styleClass="btn-close" text="✕" />
+        <Button fx:id="btnCerrar" onAction="#onVolver" styleClass="btn-secondary" text="← Volver" >
+                <padding>
+                    <Insets bottom="10" left="20" right="20" top="10" />
+                </padding>
+        </Button>
     </HBox>
 
     <!-- FORMULARIO -->

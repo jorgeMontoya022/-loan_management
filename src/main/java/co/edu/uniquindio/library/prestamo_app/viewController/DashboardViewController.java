@@ -3,6 +3,8 @@ package co.edu.uniquindio.library.prestamo_app.viewController;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import co.edu.uniquindio.library.prestamo_app.controller.PrestamoController;
+import co.edu.uniquindio.library.prestamo_app.controller.UsuarioController;
 import co.edu.uniquindio.library.prestamo_app.model.Bibliotecario;
 import co.edu.uniquindio.library.prestamo_app.session.Sesion;
 import javafx.event.ActionEvent;
@@ -11,6 +13,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
 public class DashboardViewController extends CoreViewController{
+
+    UsuarioController usuarioController;
+    PrestamoController prestamoController;
 
     Bibliotecario logginBibliotecario;
 
@@ -34,6 +39,15 @@ public class DashboardViewController extends CoreViewController{
     private Label labelBibliotecario;
 
     @FXML
+    private Label multasPendientesLabel;
+
+    @FXML
+    private Label prestamosActivosLabel;
+
+    @FXML
+    private Label usuariosActivosLabel;
+
+    @FXML
     void onAbrirPerfil(ActionEvent event) {
         browseWindow("/co/edu/uniquindio/library/prestamo_app/view/perfil-bibliotecario-view.fxml", "Mi perfil", event);
 
@@ -53,8 +67,24 @@ public class DashboardViewController extends CoreViewController{
 
     @FXML
     void initialize() {
+        usuarioController = new UsuarioController();
+        prestamoController = new PrestamoController();
         logginBibliotecario = (Bibliotecario) Sesion.getInstance().getBibliotecario();
         labelBibliotecario.setText(logginBibliotecario.getNombre());
+        contarUsuariosActivos();
+        contarPrestamosActivos();
+
     }
+
+    private void contarUsuariosActivos() {
+        int usuariosActivos = usuarioController.contarUsuariosActivos();
+        usuariosActivosLabel.setText(String.valueOf(usuariosActivos));
+    }
+
+    private void contarPrestamosActivos() {
+        int prestamosActivos = prestamoController.contarPrestamosActivos();
+        prestamosActivosLabel.setText(String.valueOf(prestamosActivos));
+    }
+
 
 }

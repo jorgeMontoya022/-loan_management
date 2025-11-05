@@ -533,6 +533,26 @@ public class Biblioteca implements Serializable {
         }
         return false;
     }
+
+    public int contarUsuariosActivos() {
+        int activos = 0;
+        for (Usuario usuario: usuarios) {
+            if (usuario.getEstadoUsuario() == EstadoUsuario.ACTIVO) {
+                activos += 1;
+            }
+        }
+        return activos;
+    }
+
+    public int contarPrestamosActivos() {
+        int activos = 0;
+        for (Prestamo prestamo: prestamos) {
+            if(prestamo.getEstadoPrestamo() == EstadoPrestamo.ACTIVO) {
+                activos +=1;
+            }
+        }
+        return activos;
+    }
 }
 
 

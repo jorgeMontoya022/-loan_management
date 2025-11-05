@@ -70,7 +70,7 @@
                         </padding>
                         <HBox alignment="CENTER_LEFT" spacing="15">
                             <VBox spacing="6" HBox.hgrow="ALWAYS">
-                                <Label styleClass="stat-number" text="0" />
+                                <Label fx:id="prestamosActivosLabel" styleClass="stat-number" text="0" />
                                 <Label styleClass="stat-label" text="PRÉSTAMOS ACTIVOS" />
                             </VBox>
                             <Label styleClass="stat-icon" text="📕" />
@@ -84,7 +84,7 @@
                         </padding>
                         <HBox alignment="CENTER_LEFT" spacing="15">
                             <VBox spacing="6" HBox.hgrow="ALWAYS">
-                                <Label styleClass="stat-number" text="0" />
+                                <Label fx:id="multasPendientesLabel" styleClass="stat-number" text="0" />
                                 <Label styleClass="stat-label" text="MULTAS PENDIENTES" />
                             </VBox>
                             <Label styleClass="stat-icon" text="⚠" />
@@ -98,7 +98,7 @@
                         </padding>
                         <HBox alignment="CENTER_LEFT" spacing="15">
                             <VBox spacing="6" HBox.hgrow="ALWAYS">
-                                <Label styleClass="stat-number" text="0" />
+                                <Label fx:id="usuariosActivosLabel" styleClass="stat-number" text="0" />
                                 <Label styleClass="stat-label" text="USUARIOS ACTIVOS" />
                             </VBox>
                             <Label styleClass="stat-icon" text="👥" />

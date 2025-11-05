@@ -2,6 +2,7 @@ package co.edu.uniquindio.library.prestamo_app.factory;
 
 import co.edu.uniquindio.library.prestamo_app.model.Biblioteca;
 import co.edu.uniquindio.library.prestamo_app.model.Bibliotecario;
+import co.edu.uniquindio.library.prestamo_app.model.Prestamo;
 import co.edu.uniquindio.library.prestamo_app.model.Usuario;
 import co.edu.uniquindio.library.prestamo_app.util.BibliotecaUtil;
 import co.edu.uniquindio.library.prestamo_app.util.PersistenceUtil;
@@ -62,5 +63,18 @@ public class ModelFactory {
 
     public Bibliotecario validarAcceso(String usuario, String password) throws Exception{
         return biblioteca.validarAcceso(usuario, password);
+    }
+
+    public List<Prestamo> getPrestamos() {
+        return biblioteca.getPrestamos();
+    }
+
+
+    public int contarUsuariosActivos() {
+        return biblioteca.contarUsuariosActivos();
+    }
+
+    public int contarPrestamosActivos() {
+        return biblioteca.contarPrestamosActivos();
     }
 }
