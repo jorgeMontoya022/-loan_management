@@ -105,8 +105,8 @@ public class BibliotecaUtil {
     private static void initializeEjemplares(Biblioteca biblioteca) {
         // Libro: Estructuras de Datos en Java - Ejemplar 1 (Disponible)
         Ejemplar ejemplar1 = new Ejemplar(
-                "978-958-123-000-1",
-                "Estructuras de Datos en Java",
+                "978-457-325-000-1",
+                "Administración",
                 "Juan Gómez",
                 "Editorial UQ",
                 2018,

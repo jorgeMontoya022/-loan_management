@@ -367,7 +367,7 @@ public class Biblioteca implements Serializable {
      * @param usuario Usuario a validar
      * @return true si está activo, false en caso contrario
      */
-    private boolean validarUsuarioActivo(Usuario usuario) {
+    public boolean validarUsuarioActivo(Usuario usuario) {
         if(usuario.getEstadoUsuario() == EstadoUsuario.ACTIVO) {
             return true;
         }

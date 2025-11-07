@@ -8,6 +8,7 @@ import java.security.SecureRandom;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 
@@ -37,6 +38,20 @@ public class Prestamo implements Serializable {
         this.fechaInicio = fechaInicio;
         this.fechaFinCompromiso = fechaFinCompromiso;
         this.fechaDevolucion = fechaDevolucion;
+    }
+
+    // Constructor sin fecha de devolución (usado al crear un préstamo nuevo)
+    public Prestamo(Usuario usuario, Ejemplar ejemplar, Bibliotecario bibliotecario,
+                    LocalDate fechaInicio, LocalDate fechaFinCompromiso) {
+        this.id = generateId();
+        this.usuario = usuario;
+        this.ejemplar = ejemplar;
+        this.estadoPrestamo = EstadoPrestamo.ACTIVO;
+        this.bibliotecario = bibliotecario;
+        this.fechaInicio = fechaInicio;
+        this.fechaFinCompromiso = fechaFinCompromiso;
+        this.fechaDevolucion = null; // Aún no se ha devuelto
+        this.multasAsociadas = new ArrayList<>();
     }
     public Prestamo() {
 

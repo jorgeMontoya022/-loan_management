@@ -3,6 +3,8 @@ module co.edu.uniquindio.library.prestamo_app {
     requires javafx.fxml;
     requires java.desktop;
     requires java.logging;
+    requires kernel;
+    requires layout;
 
 
     opens co.edu.uniquindio.library.prestamo_app to javafx.fxml;
